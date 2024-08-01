@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   color: #333;
   background-color: #f8f9fa;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -46,6 +47,24 @@ header nav ul li a {
   font-weight: 700;
 }
 
+.hero {
+  background: url('public/images/hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #000;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -66,6 +85,7 @@ h2 {
 p {
   line-height: 1.6;
   margin-bottom: 2rem;
+  color: #333;
 }
 
 .gallery-grid {
@@ -95,7 +115,8 @@ form input, form textarea {
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 100%;
+  background-color: #fff;
+  color: #333;
 }
 
 form button {
@@ -123,44 +144,80 @@ footer {
   padding: 1rem;
 }
 
+footer .social-media a {
+  margin: 0 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  color: #dcdcdc;
+}
+
+.tennis-ball-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tennis-ball {
+  width: 50px;
+  height: 50px;
+  background: url('src/assets/tennisball.png') no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  animation: bounce 10s infinite linear;
+}
+
+@keyframes bounce {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(100vw, 50vh); }
+  50% { transform: translate(50vw, 100vh); }
+  75% { transform: translate(0, 50vh); }
+  100% { transform: translate(0, 0); }
+}
+
 @media (max-width: 768px) {
   header .container {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   header nav ul {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   header nav ul li {
-      margin: 0.5rem 0;
+    margin: 0.5rem 0;
   }
 
   .container {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   h1, h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   header h1 {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .gallery-grid {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 }
