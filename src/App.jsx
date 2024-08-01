@@ -36,7 +36,7 @@ function App() {
         <section id="gallery" className="container">
           <h2>Gallery</h2>
           <div className="gallery-grid">
-            <img src="public/images/tennis1.jpg" alt="Tennis Image 1" />
+            <img src="src/assets/jayden.webp" alt="Tennis Image 1" />
             <img src="public/images/tennis2.jpg" alt="Tennis Image 2" />
             <img src="public/images/tennis3.jpg" alt="Tennis Image 3" />
           </div>
