@@ -51,6 +51,7 @@ header, main, footer {
   display: flex;
   align-items: center;
   position: absolute;
+  size: 150%;
   top: 70px;
   left: 30px; 
   transition: all 0.6s ease; 
