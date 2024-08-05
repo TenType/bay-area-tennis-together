@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -5,89 +6,145 @@ body {
   box-sizing: border-box;
   color: #333;
   background-color: #f8f9fa;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-header {
-  background: #0047ab;
+/* Header Styles */
+.header {
+  background: #333;
   color: #fff;
-  padding: 1rem 0;
+  height: 3rem; /* Reduced height by half */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-header .container {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;  /* Ensure it takes the full width */
   padding: 0 1rem;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
-header nav ul {
+.logo-img {
+  height: 2rem; /* Adjust height to fit within the new header size */
+  margin-right: 0.5rem;
+}
+
+.header .logo {
+  margin: 0;
+  font-size: 1rem; /* Adjust font size to fit within the new header size */
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-header nav ul li {
-  margin: 0 1rem;
+.nav-links li {
+  margin: 0 0.5rem;
 }
 
-header nav ul li a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
 }
 
+/* Hero Section Styles */
 .hero {
-  background: url('public/images/hero.jpg') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 5rem 0;
   position: relative;
+  text-align: center;
+  height: 100vh; /* Make sure the hero section covers the full viewport height */
+  width: 100%;
 }
 
-.hero h2 {
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-title {
   font-size: 3rem;
   margin: 0;
+  color: #fff; /* Change text color to white for better contrast */
 }
 
-.hero p {
+.hero-subtitle {
   font-size: 1.5rem;
-  color: #000;
+  margin-bottom: 2rem;
+  color: #fff; /* Change text color to white for better contrast */
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background: #0047ab;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #003b8b;
+}
+
+/* Container Styles */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;  /* Ensure it takes the full width */
   padding: 2rem 1rem;
 }
 
-h1, h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+/* Section Styles */
+.section {
+  margin-bottom: 4rem;
 }
 
-h2 {
+.section-title {
+  text-align: center;
   font-size: 2rem;
   color: #0047ab;
+  margin-bottom: 1rem;
 }
 
 p {
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: #333;
 }
 
+/* Gallery Styles */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -101,6 +158,7 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
@@ -133,91 +191,11 @@ form button:hover {
   background: #003b8b;
 }
 
-footer {
-  background: #0047ab;
+/* Footer Styles */
+.footer {
+  background: #333;
   color: #fff;
   text-align: center;
   padding: 1rem 0;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-footer .social-media a {
-  margin: 0 0.5rem;
-  color: #fff;
-  text-decoration: none;
-}
-
-footer .social-media a:hover {
-  color: #dcdcdc;
-}
-
-.tennis-ball-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.tennis-ball {
-  width: 50px;
-  height: 50px;
-  background: url('src/assets/tennisball.png') no-repeat center center;
-  background-size: contain;
-  position: absolute;
-  animation: bounce 10s infinite linear;
-}
-
-@keyframes bounce {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(100vw, 50vh); }
-  50% { transform: translate(50vw, 100vh); }
-  75% { transform: translate(0, 50vh); }
-  100% { transform: translate(0, 0); }
-}
-
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav ul li {
-    margin: 0.5rem 0;
-  }
-
-  .container {
-    padding: 1rem;
-  }
-
-  h1, h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.25rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
 }
