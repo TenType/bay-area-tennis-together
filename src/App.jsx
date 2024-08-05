@@ -30,7 +30,7 @@ function App() {
           </video>
           <div className="hero-content">
             <h2 className="hero-title">Dedication, Sweat, Success</h2>
-            <p className="hero-subtitle">Join the most dedicated tennis community in the Bay Area</p>
+            <p className="hero-subtitle">Join the most dedicated tennis community in the Bay Area!</p>
             <a href="#about" className="btn">Learn More</a>
           </div>
         </section>
@@ -48,6 +48,8 @@ function App() {
             <img src="src/assets/stretching.jpg" alt="Tennis Image 1" />
             <img src="src/assets/stretching2.jpg" alt="Tennis Image 2" />
             <img src="src/assets/tenniskids.jpg" alt="Tennis Image 3" />
+            <img src="src/assets/jaydenteaching.webp" alt="Tennis Image 4" />
+            <img src="src/assets/groupphotoblurry.webp" alt="Tennis Image 5" />
           </div>
         </section>
         <section id="contact" className="section container">

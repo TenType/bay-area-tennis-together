@@ -235,3 +235,7 @@ form button:hover {
     align-items: flex-start;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
