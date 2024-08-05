@@ -6,16 +6,22 @@ import './App.css';
 function App() {
   useEffect(() => {
     const header = document.querySelector('.header');
-    const hero = document.querySelector('.hero');
+    const logoContainer = document.querySelector('.logo-container');
 
     const observer = new IntersectionObserver(
-      ([e]) => {
-        header.classList.toggle('scrolled', e.intersectionRatio < 1);
+      ([entry]) => {
+        if (entry.intersectionRatio < 0.5) {
+          header.classList.add('scrolled');
+          logoContainer.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+          logoContainer.classList.remove('scrolled');
+        }
       },
-      { threshold: [1] }
+      { threshold: [0.5] }
     );
 
-    observer.observe(hero);
+    observer.observe(document.querySelector('#hero'));
 
     return () => {
       observer.disconnect();
@@ -72,16 +78,41 @@ function App() {
         </section>
         <section id="contact" className="section container">
           <h2 className="section-title">Contact Us</h2>
-          <form action="#" method="POST">
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required />
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
-            <label htmlFor="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit" className="btn">Send</button>
+          <form action="#" method="POST" className="contact-form">
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="enquiry">Reason of Enquiry</label>
+              <select id="enquiry" name="enquiry">
+                <option value="">--Select--</option>
+                <option value="general">General</option>
+                <option value="membership">Membership</option>
+                <option value="events">Events</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Comments</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" className="btn">Submit</button>
           </form>
         </section>
       </main>
