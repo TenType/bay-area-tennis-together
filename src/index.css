@@ -1,19 +1,28 @@
 /* Global Styles */
-body {
+html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #333;
-  background-color: #f8f9fa;
+  width: 100%;
   overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header, main, footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header Styles */
 .header {
   background: #333;
   color: #fff;
-  height: 3rem; /* Reduced height by half */
+  height: 3rem; /* Adjusted height */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -21,14 +30,16 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  margin: 0; /* Remove any default margin */
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;  /* Ensure it takes the full width */
+  width: 100%;
   padding: 0 1rem;
+  max-width: 100%;
 }
 
 .logo-container {
@@ -38,13 +49,13 @@ body {
 }
 
 .logo-img {
-  height: 2rem; /* Adjust height to fit within the new header size */
+  height: 2rem;
   margin-right: 0.5rem;
 }
 
 .header .logo {
   margin: 0;
-  font-size: 1rem; /* Adjust font size to fit within the new header size */
+  font-size: 1rem;
   display: flex;
   align-items: center;
 }
@@ -70,8 +81,10 @@ body {
 .hero {
   position: relative;
   text-align: center;
-  height: 100vh; /* Make sure the hero section covers the full viewport height */
-  width: 100%;
+  height: 100vh;
+  width: 100%; /* Ensure the hero section spans the full width of the viewport */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }
 
 .background-video {
@@ -92,18 +105,20 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
+  padding: 0 1rem; /* Ensure content doesn't touch the edges */
 }
 
 .hero-title {
   font-size: 3rem;
   margin: 0;
-  color: #fff; /* Change text color to white for better contrast */
+  color: #fff;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #fff; /* Change text color to white for better contrast */
+  color: #fff;
 }
 
 .btn {
@@ -123,8 +138,9 @@ body {
 
 /* Container Styles */
 .container {
-  width: 100%;  /* Ensure it takes the full width */
+  width: 100%;
   padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 /* Section Styles */
@@ -198,4 +214,24 @@ form button:hover {
   text-align: center;
   padding: 1rem 0;
   width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links on smaller screens */
+  }
+
+  .header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
