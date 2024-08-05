@@ -5,6 +5,7 @@ html, body {
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth
 }
 
 * {
@@ -17,10 +18,10 @@ header, main, footer {
   padding: 0;
 }
 
-/* Header Styles */
 .header {
   background: #333;
   color: #fff;
+  height: 3rem;
   height: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -107,7 +108,6 @@ header, main, footer {
   font-weight: 700;
 }
 
-/* Hero Section Styles */
 .hero {
   position: relative;
   text-align: center;
@@ -138,6 +138,7 @@ header, main, footer {
   height: 100%;
   width: 100%;
   padding: 0 1rem; 
+  padding: 0 1rem; 
 }
 
 .hero-title {
@@ -167,14 +168,12 @@ header, main, footer {
   background: #003b8b;
 }
 
-/* Container Styles */
 .container {
   width: 100%;
   padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
-/* Section Styles */
 .section {
   margin-bottom: 4rem;
 }
@@ -191,7 +190,6 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Gallery Styles */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -262,7 +260,7 @@ form button:hover {
   background: #003b8b;
 }
 
-/* Footer Styles */
+
 .footer {
   background: #333;
   color: #fff;
@@ -271,7 +269,7 @@ form button:hover {
   width: 100%;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
