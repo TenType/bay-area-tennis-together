@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import EventCalendar from './EventCalendar';
 import './index.css';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const header = document.querySelector('.header');
+    const hero = document.querySelector('.hero');
+
+    const observer = new IntersectionObserver(
+      ([e]) => {
+        header.classList.toggle('scrolled', e.intersectionRatio < 1);
+      },
+      { threshold: [1] }
+    );
+
+    observer.observe(hero);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div>
+    <div id="root">
       <header className="header">
         <div className="container">
           <div className="logo-container">
