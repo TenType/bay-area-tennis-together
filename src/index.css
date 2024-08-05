@@ -22,15 +22,20 @@ header, main, footer {
 .header {
   background: #333;
   color: #fff;
-  height: 3rem; /* Adjusted height */
+  height: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 0; /* Remove any default margin */
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(51, 51, 51, 0.9);
+  height: 3rem;
 }
 
 .header .container {
@@ -45,12 +50,26 @@ header, main, footer {
 .logo-container {
   display: flex;
   align-items: center;
-  flex: 1;
+  position: absolute;
+  top: 70px;
+  left: 30px; 
+  transition: all 1s ease; 
 }
 
-.logo-img {
+.header.scrolled .logo-container {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: translate(0, 0);
+}
+
+.logo-container img {
+  height: 6rem;
+  transition: all 1s ease; 
+}
+
+.header.scrolled .logo-container img {
   height: 2rem;
-  margin-right: 0.5rem;
 }
 
 .header .logo {
@@ -58,6 +77,7 @@ header, main, footer {
   font-size: 1rem;
   display: flex;
   align-items: center;
+  transition: all 1s ease; 
 }
 
 .nav-links {
@@ -65,6 +85,17 @@ header, main, footer {
   display: flex;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.header.scrolled .nav-links {
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: none;
 }
 
 .nav-links li {
@@ -82,9 +113,10 @@ header, main, footer {
   position: relative;
   text-align: center;
   height: 100vh;
-  width: 100%; /* Ensure the hero section spans the full width of the viewport */
-  margin: 0; /* Remove any default margin */
-  padding: 0; /* Remove any default padding */
+  width: 100%;
+  margin: 0; 
+  padding: 0; 
+  padding-top: 3rem; 
 }
 
 .background-video {
@@ -106,7 +138,7 @@ header, main, footer {
   justify-content: center;
   height: 100%;
   width: 100%;
-  padding: 0 1rem; /* Ensure content doesn't touch the edges */
+  padding: 0 1rem; 
 }
 
 .hero-title {
@@ -227,7 +259,7 @@ form button:hover {
   }
 
   .nav-links {
-    display: none; /* Hide navigation links on smaller screens */
+    display: none; 
   }
 
   .header .container {
