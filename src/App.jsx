@@ -67,7 +67,7 @@ function App() {
           Whether you're a beginner just starting out or a seasoned player looking to hone your skills,
           we have something for everyone. Our community is built on the principles of sportsmanship, camaraderie, and a shared passion for tennis. 
           Join us and become part of a supportive and dynamic tennis community where dedication, sweat, and success are celebrated every day. <br /><br />
-          Officially under our parent organization <a href="https://www.ltnfamily.org/clubs/tennis-club">Love Thy Neighbor</a>.
+          Officially under our parent organization <a href="https://www.ltnfamily.org/clubs/tennis-club" target="_blank" rel="noopener noreferrer">Love Thy Neighbor</a>.
           </p>
         </section>
         <section id="events" className="section container">
