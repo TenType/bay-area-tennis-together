@@ -60,7 +60,15 @@ function App() {
         </section>
         <section id="about" className="section container">
           <h2 className="section-title">About Us</h2>
-          <p>Welcome to Bay Area Tennis Together, your go-to community for all things tennis in the Bay Area. Whether you're a beginner or a seasoned player, we have something for everyone.</p>
+          <p>
+          Welcome to Bay Area Tennis Together, your go-to community for all things tennis in the Bay Area. 
+          Whether you're a beginner or a seasoned player, we have something for everyone. <br />
+          At Bay Area Tennis Together, our mission is to bring tennis enthusiasts of all levels together. 
+          Whether you're a beginner just starting out or a seasoned player looking to hone your skills,
+          we have something for everyone. Our community is built on the principles of sportsmanship, camaraderie, and a shared passion for tennis. 
+          Join us and become part of a supportive and dynamic tennis community where dedication, sweat, and success are celebrated every day. <br /><br />
+          Officially under our parent organization Love Thy Neighbor https://www.ltnfamily.org/clubs/tennis-club
+          </p>
         </section>
         <section id="events" className="section container">
           <h2 className="section-title">Events</h2>
