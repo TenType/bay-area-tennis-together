@@ -1,27 +1,27 @@
-import React, { useEffect } from 'react';
-import EventCalendar from './EventCalendar';
-import './index.css';
-import './App.css';
+import { useEffect } from "react";
+import EventCalendar from "./EventCalendar";
+import "./index.css";
+import "./App.css";
 
 function App() {
   useEffect(() => {
-    const header = document.querySelector('.header');
-    const logoContainer = document.querySelector('.logo-container');
+    const header = document.querySelector(".header");
+    const logoContainer = document.querySelector(".logo-container");
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.intersectionRatio < 0.5) {
-          header.classList.add('scrolled');
-          logoContainer.classList.add('scrolled');
+          header.classList.add("scrolled");
+          logoContainer.classList.add("scrolled");
         } else {
-          header.classList.remove('scrolled');
-          logoContainer.classList.remove('scrolled');
+          header.classList.remove("scrolled");
+          logoContainer.classList.remove("scrolled");
         }
       },
       { threshold: [0.5] }
     );
 
-    observer.observe(document.querySelector('#hero'));
+    observer.observe(document.querySelector("#hero"));
 
     return () => {
       observer.disconnect();
@@ -38,10 +38,18 @@ function App() {
           </div>
           <nav>
             <ul className="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#events">Events</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#events">Events</a>
+              </li>
+              <li>
+                <a href="#gallery">Gallery</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -54,20 +62,39 @@ function App() {
           </video>
           <div className="hero-content">
             <h2 className="hero-title">Dedication, Sweat, Success</h2>
-            <p className="hero-subtitle">Join the most dedicated tennis community in the Bay Area!</p>
-            <a href="#about" className="btn">Learn More</a>
+            <p className="hero-subtitle">
+              Join the most dedicated tennis community in the Bay Area!
+            </p>
+            <a href="#about" className="btn">
+              Learn More
+            </a>
           </div>
         </section>
         <section id="about" className="section container">
           <h2 className="section-title">About Us</h2>
           <p>
-          Welcome to Bay Area Tennis Together, your go-to community for all things tennis in the Bay Area. 
-          Whether you're a beginner or a seasoned player, we have something for everyone. <br />
-          At Bay Area Tennis Together, our mission is to bring tennis enthusiasts of all levels together. 
-          Our community is built on the principles of sportsmanship, camaraderie, and a shared passion for tennis. <br />
-          Join us and become part of a supportive and dynamic tennis community where dedication, sweat, and success are celebrated every day. <br /><br />
-          Officially under our parent organization <a href="https://www.ltnfamily.org/home" target="_blank" rel="noopener noreferrer">Love Thy Neighbor</a>.<br />
-          Ran primarily by high school volunteers, on the second Saturday of each month (but check the calendar to be certain!)
+            Welcome to Bay Area Tennis Together, your go-to community for all
+            things tennis in the Bay Area. Whether you are a beginner or a
+            seasoned player, we have something for everyone. <br />
+            At Bay Area Tennis Together, our mission is to bring tennis
+            enthusiasts of all levels together. Our community is built on the
+            principles of sportsmanship, camaraderie, and a shared passion for
+            tennis. <br />
+            Join us and become part of a supportive and dynamic tennis community
+            where dedication, sweat, and success are celebrated every day.{" "}
+            <br />
+            <br />
+            Officially under our parent organization{" "}
+            <a
+              href="https://www.ltnfamily.org/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Love Thy Neighbor
+            </a>
+            .<br />
+            Ran primarily by high school volunteers, on the second Saturday of
+            each month (but check the calendar to be certain!)
           </p>
         </section>
         <section id="events" className="section container">
@@ -78,10 +105,19 @@ function App() {
           <h2 className="section-title">Gallery</h2>
           <div className="gallery-grid">
             <img src="src/assets/gallery/stretching.jpg" alt="Tennis Image 1" />
-            <img src="src/assets/gallery/stretching2.jpg" alt="Tennis Image 2" />
+            <img
+              src="src/assets/gallery/stretching2.jpg"
+              alt="Tennis Image 2"
+            />
             <img src="src/assets/gallery/tenniskids.jpg" alt="Tennis Image 3" />
-            <img src="src/assets/gallery/jaydenteaching.webp" alt="Tennis Image 4" />
-            <img src="src/assets/gallery/groupphotoblurry.webp" alt="Tennis Image 5" />
+            <img
+              src="src/assets/gallery/jaydenteaching.webp"
+              alt="Tennis Image 4"
+            />
+            <img
+              src="src/assets/gallery/groupphotoblurry.webp"
+              alt="Tennis Image 5"
+            />
           </div>
         </section>
         <section id="contact" className="section container">
@@ -120,7 +156,9 @@ function App() {
               <label htmlFor="message">Comments</label>
               <textarea id="message" name="message" required></textarea>
             </div>
-            <button type="submit" className="btn">Submit</button>
+            <button type="submit" className="btn">
+              Submit
+            </button>
           </form>
         </section>
       </main>
