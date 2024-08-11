@@ -3,6 +3,15 @@ import EventCalendar from "./EventCalendar";
 import "./index.css";
 import "./App.css";
 
+import logo from "./assets/batt.png";
+import backgroundVideo from "./assets/background.mp4";
+
+import stretching from "./assets/gallery/stretching.jpg";
+import stretching2 from "./assets/gallery/stretching2.jpg";
+import groupphoto from "./assets/gallery/groupphoto.webp";
+import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
+import practice from "./assets/gallery/practice.webp";
+
 function App() {
   useEffect(() => {
     const header = document.querySelector(".header");
@@ -33,7 +42,7 @@ function App() {
       <header className="header">
         <div className="container">
           <div className="logo-container">
-            <img src="src/assets/batt.png" alt="Logo" className="logo-img" />
+            <img src={logo} alt="Logo" className="logo-img" />
             <h1 className="logo">Bay Area Tennis Together</h1>
           </div>
           <nav>
@@ -57,7 +66,7 @@ function App() {
       <main>
         <section id="hero" className="hero">
           <video autoPlay loop muted className="background-video">
-            <source src="src/assets/IMG_4691.mp4" type="video/mp4" />
+            <source src={backgroundVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="hero-content">
@@ -104,20 +113,11 @@ function App() {
         <section id="gallery" className="section container">
           <h2 className="section-title">Gallery</h2>
           <div className="gallery-grid">
-            <img src="src/assets/gallery/stretching.jpg" alt="Tennis Image 1" />
-            <img
-              src="src/assets/gallery/stretching2.jpg"
-              alt="Tennis Image 2"
-            />
-            <img src="src/assets/gallery/tenniskids.jpg" alt="Tennis Image 3" />
-            <img
-              src="src/assets/gallery/jaydenteaching.webp"
-              alt="Tennis Image 4"
-            />
-            <img
-              src="src/assets/gallery/groupphotoblurry.webp"
-              alt="Tennis Image 5"
-            />
+            <img src={stretching} alt="Tennis Image 1" />
+            <img src={stretching2} alt="Tennis Image 2" />
+            <img src={groupphoto} alt="Tennis Image 3" />
+            <img src={groupphoto2} alt="Tennis Image 4" />
+            <img src={practice} alt="Tennis Image 5" />
           </div>
         </section>
         <section id="contact" className="section container">
