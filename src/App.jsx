@@ -113,13 +113,14 @@ function App() {
           <h2 className="section-title">Events</h2>
           <EventCalendar />
         </section>
-        <section id="coaches" className="section container">
+        
+  <section id="coaches" className="section container">
   <h2 className="section-title">Our Coaches</h2>
   <div className="coaches-grid">
     <div className="coach">
       <img src="src/assets/coach1.jpg" alt="Max Wen" />
       <h3>Max Wen</h3>
-      <p>Coach 1's bio goes here. This coach specializes in beginners and has a passion for teaching the fundamentals of tennis.</p>
+      <p>Coach 1's bio goes here. </p>
     </div>
     <div className="coach">
       <img src="src/assets/coach2.jpg" alt="Jayden Szeto" />
@@ -132,13 +133,13 @@ function App() {
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach4.jpg" alt="Jayden Szeto" />
-      <h3>Coach Name 2</h3>
+      <img src="src/assets/coach4.jpg" alt="Daniel Guo" />
+      <h3>Daniel Guo</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach2.jpg" alt="Jayden Szeto" />
-      <h3>Coach Name 2</h3>
+      <img src="src/assets/coach2.jpg" alt="Jason Lai" />
+      <h3>Jason Lai</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
   </div>
