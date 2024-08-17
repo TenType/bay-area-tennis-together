@@ -347,3 +347,15 @@ html {
   font-size: 1rem;
   color: #555;
 }
+
+@media (max-width: 768px) {
+  .coaches-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .coaches-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}

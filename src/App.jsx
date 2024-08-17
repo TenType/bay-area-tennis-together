@@ -11,6 +11,7 @@ import stretching2 from "./assets/gallery/stretching2.jpg";
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
 import practice from "./assets/gallery/practice.webp";
+import coach1 from "./assets/gallery/coach1.webp"
 
 function App() {
   useEffect(() => {
@@ -123,7 +124,7 @@ function App() {
       <p>Coach 1's bio goes here. </p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach2.jpg" alt="Jayden Szeto" />
+      <img src={coach1} alt="Jayden Szeto" />
       <h3>Jayden Szeto</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
@@ -138,9 +139,14 @@ function App() {
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach2.jpg" alt="Jason Lai" />
+      <img src="src/assets/coach5.jpg" alt="Jason Lai" />
       <h3>Jason Lai</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
+    </div>
+    <div className="coach">
+      <img src="src/assets/coach6.jpg" alt="idk which kid" />
+      <h3>idk which kid</h3>
+      <p>filler coaches</p>
     </div>
   </div>
 </section>
