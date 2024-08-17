@@ -11,7 +11,7 @@ import stretching2 from "./assets/gallery/stretching2.jpg";
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
 import practice from "./assets/gallery/practice.webp";
-import coach1 from "./assets/gallery/coach1.webp"
+import coach2 from "./assets/gallery/jayden.webp"
 
 function App() {
   useEffect(() => {
@@ -119,32 +119,32 @@ function App() {
   <h2 className="section-title">Our Coaches</h2>
   <div className="coaches-grid">
     <div className="coach">
-      <img src="src/assets/coach1.jpg" alt="Max Wen" />
+      <img src={coach2}  alt="Max Wen" />
       <h3>Max Wen</h3>
       <p>Coach 1's bio goes here. </p>
     </div>
     <div className="coach">
-      <img src={coach1} alt="Jayden Szeto" />
+      <img src={coach2} alt="Jayden Szeto" />
       <h3>Jayden Szeto</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach3.jpg" alt="Darryl Wu" />
+      <img src={coach2} alt="Darryl Wu" />
       <h3>Darryl Wu</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach4.jpg" alt="Daniel Guo" />
+      <img src={coach2}  alt="Daniel Guo" />
       <h3>Daniel Guo</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach5.jpg" alt="Jason Lai" />
+      <img src={coach2}  alt="Jason Lai" />
       <h3>Jason Lai</h3>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
-      <img src="src/assets/coach6.jpg" alt="idk which kid" />
+      <img src={coach2}  alt="idk which kid" />
       <h3>idk which kid</h3>
       <p>filler coaches</p>
     </div>

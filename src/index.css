@@ -204,7 +204,6 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Styles */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -350,12 +349,20 @@ html {
 
 @media (max-width: 768px) {
   .coaches-grid {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    grid-template-columns: 1fr; 
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .coaches-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
+}
+
+.coach img {
+  width: 250px; 
+  height: 250px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 1rem;
 }
