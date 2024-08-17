@@ -293,3 +293,16 @@ form button:hover {
 html {
   scroll-behavior: smooth;
 }
+
+.event-calendar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.event-calendar iframe {
+  border: 2px solid #0047ab;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
