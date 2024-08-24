@@ -136,7 +136,10 @@ function App() {
     <div className="coach">
       <img src={coach2}  alt="Daniel Guo" />
       <h3>Daniel Guo</h3>
-      <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
+      <p>Hi, I'm Daniel, and I've been playing tennis ever since I was young, and I'm really excited to be teaching kids how to play tennis. I think teaching is one of the most 
+        respectable pursuits one can commit to, and it's also very fun. Seeing everyone improve lesson by lesson is my goal, and I'm happy that I've had the opportunity to 
+        help people gain access to tennis, especially because it's a sport that's seen as having a high price entry level.  
+      </p>
     </div>
     <div className="coach">
       <img src={coach2}  alt="Jason Lai" />
