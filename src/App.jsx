@@ -121,16 +121,19 @@ function App() {
     <div className="coach">
       <img src={coach2}  alt="Max Wen" />
       <h3>Max Wen</h3>
+      <p className="coach-title">Founder</p>
       <p>Coach 1's bio goes here. </p>
     </div>
     <div className="coach">
       <img src={coach2} alt="Jayden Szeto" />
       <h3>Jayden Szeto</h3>
+      <p className="coach-title">Founder</p>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">
       <img src={coach2} alt="Darryl Wu" />
       <h3>Darryl Wu</h3>
+      <p className="coach-title">Founder</p>
       <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
     </div>
     <div className="coach">

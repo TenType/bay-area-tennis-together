@@ -366,3 +366,12 @@ html {
   object-fit: cover; 
   margin-bottom: 1rem;
 }
+
+.coach-title {
+  font-size: 1.1rem; /* Slightly larger for better visibility */
+  color: #0056b3;/* A more vibrant blue */
+  margin: 0.25rem 0; /* Space between the name and title */
+  font-weight: 600; /* Make it a bit bolder */
+  letter-spacing: 0.5px; /* Slight letter spacing for elegance */
+  text-transform: uppercase; /* Keeps the text uppercase */
+}
