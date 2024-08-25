@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import EventCalendar from "./EventCalendar";
 import "./index.css";
 import "./App.css";
@@ -14,29 +14,29 @@ import practice from "./assets/gallery/practice.webp";
 import coach2 from "./assets/gallery/jayden.webp"
 
 function App() {
-  useEffect(() => {
-    const header = document.querySelector(".header");
-    const logoContainer = document.querySelector(".logo-container");
+  const [formStatus, setFormStatus] = useState(""); // Set up state for form status
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.intersectionRatio < 0.5) {
-          header.classList.add("scrolled");
-          logoContainer.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-          logoContainer.classList.remove("scrolled");
-        }
-      },
-      { threshold: [0.5] }
-    );
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    observer.observe(document.querySelector("#hero"));
+    const formData = new FormData(event.target);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+    const firstName = formData.get("first-name");
+    const lastName = formData.get("last-name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const enquiry = formData.get("enquiry");
+    const message = formData.get("message");
+
+    const url = `https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse?usp=pp_url&entry.1878656242=${firstName}&entry.1696058884=${lastName}&entry.431504041=${email}&entry.42028302=${phone}&entry.1237852117=${enquiry}&entry.1646022538=${message}`;
+
+    try {
+      await fetch(url, { mode: 'no-cors' });
+      setFormStatus("Your response has been recorded."); // Update status on success
+    } catch (error) {
+      setFormStatus("There was an error submitting your response."); // Update status on error
+    }
+  };
 
   return (
     <div id="root">
@@ -169,47 +169,49 @@ function App() {
         <section id="contact" className="section container">
   <h2 className="section-title">Contact Us</h2>
   <form 
-    action="https://formspree.io/f/xeojvllz" 
-    method="POST" 
-    className="contact-form"
-  >
-    <div className="form-row">
-      <div className="form-group">
-        <label htmlFor="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last-name" required />
-      </div>
-    </div>
-    <div className="form-row">
-      <div className="form-group">
-        <label htmlFor="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" />
-      </div>
+  action="https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse" 
+  method="POST" 
+  target="_self"
+  className="contact-form"
+>
+  <div className="form-row">
+    <div className="form-group">
+      <label htmlFor="first-name">First Name</label>
+      <input type="text" id="first-name" name="entry.1878656242" required />
     </div>
     <div className="form-group">
-      <label htmlFor="enquiry">Reason of Enquiry</label>
-      <select id="enquiry" name="enquiry">
-        <option value="">--Select--</option>
-        <option value="general">General</option>
-        <option value="membership">Membership</option>
-        <option value="events">Events</option>
-      </select>
+      <label htmlFor="last-name">Last Name</label>
+      <input type="text" id="last-name" name="entry.1696058884" required />
+    </div>
+  </div>
+  <div className="form-row">
+    <div className="form-group">
+      <label htmlFor="email">Email Address</label>
+      <input type="email" id="email" name="entry.431504041" required />
     </div>
     <div className="form-group">
-      <label htmlFor="message">Comments</label>
-      <textarea id="message" name="message" required></textarea>
+      <label htmlFor="phone">Phone Number</label>
+      <input type="tel" id="phone" name="entry.42028302" />
     </div>
-    <button type="submit" className="btn">
-      Submit
-    </button>
-  </form>
+  </div>
+  <div className="form-group">
+    <label htmlFor="enquiry">Reason of Enquiry</label>
+    <select id="enquiry" name="entry.1237852117">
+      <option value="">--Select--</option>
+      <option value="General">General</option>
+      <option value="Membership">Membership</option>
+      <option value="Events">Events</option>
+    </select>
+  </div>
+  <div className="form-group">
+    <label htmlFor="message">Comments</label>
+    <textarea id="message" name="entry.1646022538" required></textarea>
+  </div>
+  <button type="submit" className="btn">
+    Submit
+  </button>
+</form>
+{formStatus && <p className="form-status">{formStatus}</p>}
 </section>
 
       </main>
