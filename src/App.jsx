@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EventCalendar from "./EventCalendar";
 import "./index.css";
 import "./App.css";
@@ -14,7 +14,33 @@ import practice from "./assets/gallery/practice.webp";
 import coach2 from "./assets/gallery/jayden.webp"
 
 function App() {
-  const [formStatus, setFormStatus] = useState(""); // Set up state for form status
+  const [formStatus, setFormStatus] = useState(""); 
+
+  // Scroll behavior for header and logo
+  useEffect(() => {
+    const header = document.querySelector('.header');
+    const hero = document.querySelector('.hero');
+    const logoContainer = document.querySelector('.logo-container');
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.intersectionRatio < 0.5) {
+          header.classList.add('scrolled');
+          logoContainer.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+          logoContainer.classList.remove('scrolled');
+        }
+      },
+      { threshold: [0.5] }
+    );
+
+    observer.observe(document.querySelector('#hero'));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,9 +58,9 @@ function App() {
 
     try {
       await fetch(url, { mode: 'no-cors' });
-      setFormStatus("Your response has been recorded."); // Update status on success
+      setFormStatus("Your response has been recorded."); 
     } catch (error) {
-      setFormStatus("There was an error submitting your response."); // Update status on error
+      setFormStatus("There was an error submitting your response."); 
     }
   };
 
