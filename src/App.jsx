@@ -16,7 +16,6 @@ import coach2 from "./assets/gallery/jayden.webp"
 function App() {
   const [formStatus, setFormStatus] = useState(""); 
 
-  // Scroll behavior for header and logo
   useEffect(() => {
     const header = document.querySelector('.header');
     const hero = document.querySelector('.hero');
