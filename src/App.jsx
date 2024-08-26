@@ -12,6 +12,7 @@ import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
 import practice from "./assets/gallery/practice.webp";
 import coach2 from "./assets/gallery/jayden.webp"
+import coach1 from "./assets/gallery/coach1.webp"
 
 function App() {
   const [formStatus, setFormStatus] = useState(""); 
@@ -86,6 +87,9 @@ function App() {
                 <a href="#coaches">Our Coaches</a>
               </li>
               <li>
+                <a href="#faq">FAQ</a>
+              </li>
+              <li>
                 <a href="#contact">Contact</a>
               </li>
             </ul>
@@ -135,6 +139,7 @@ function App() {
             each month (but check the calendar to be certain!)
           </p>
         </section>
+        
         <section id="events" className="section container">
           <h2 className="section-title">Events</h2>
           <EventCalendar />
@@ -146,38 +151,54 @@ function App() {
     <div className="coach">
       <img src={coach2}  alt="Max Wen" />
       <h3>Max Wen</h3>
-      <p className="coach-title">Founder</p>
-      <p>Coach 1's bio goes here. </p>
+      <p className="coach-title">Coach</p>
+      <p>Max Wen is a passionate tennis coach with over a decade of experience. He has played competitively at various levels and is dedicated to helping players of all ages 
+        improve their skills. Max believes in a holistic approach to tennis, focusing on both the mental and physical aspects of the game. His students appreciate his patience, 
+        expertise, and ability to tailor lessons to individual needs. </p>
     </div>
     <div className="coach">
       <img src={coach2} alt="Jayden Szeto" />
       <h3>Jayden Szeto</h3>
-      <p className="coach-title">Founder</p>
-      <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
+      <p className="coach-title">Coach</p>
+      <p>Jayden Szeto has been playing tennis for most of his life, transitioning from player to coach. He started playing tennis at a young age and quickly fell in love with the sport.
+         Jayden is known for his dynamic coaching style, which emphasizes agility, technique, and strategy. 
+         He has a knack for identifying and nurturing talent, making him a favorite among young athletes.</p>
     </div>
     <div className="coach">
       <img src={coach2} alt="Darryl Wu" />
       <h3>Darryl Wu</h3>
-      <p className="coach-title">Founder</p>
-      <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
+      <p className="coach-title">Coach</p>
+      <p>Darryl Wu is a seasoned tennis coach with a background in biology and anatomy. His deep understanding of biomechanics allows him to help players optimize their performance and prevent injuries. 
+        He is committed to fostering a positive and motivating environment for all his students.</p>
     </div>
     <div className="coach">
-      <img src={coach2}  alt="Daniel Guo" />
+      <img src={coach1}  alt="Daniel Guo" />
       <h3>Daniel Guo</h3>
-      <p>Hi, I'm Daniel, and I've been playing tennis ever since I was young, and I'm really excited to be teaching kids how to play tennis. I think teaching is one of the most 
-        respectable pursuits one can commit to, and it's also very fun. Seeing everyone improve lesson by lesson is my goal, and I'm happy that I've had the opportunity to 
-        help people gain access to tennis, especially because it's a sport that's seen as having a high price entry level.  
+      <p className="coach-title">Coach</p>
+      <p>Daniel has been passionate about tennis since he was young, and he's thrilled to be teaching kids how to play the game. 
+        He believes that teaching is one of the most rewarding pursuits, and it’s something he truly enjoys. Watching students improve 
+        with each lesson is incredibly fulfilling for Daniel, and he’s grateful for the opportunity to help more people experience tennis, 
+        especially since it’s often seen as a sport with a high barrier to entry.  
       </p>
     </div>
     <div className="coach">
       <img src={coach2}  alt="Jason Lai" />
       <h3>Jason Lai</h3>
-      <p>Coach 2's bio goes here. This coach has years of experience and has trained several advanced players.</p>
+      <p className="coach-title">Coach</p>
+      <p> Jason Lai is an accomplished tennis coach who has worked with players of all levels, from beginners to professionals. 
+        With a focus on tactical training and match play, Jason helps his students develop the skills needed to excel in competitive tennis. 
+        He is known for his very dynamic coaching style and his ability to push players to reach their full potential. 
+        Jason’s coaching philosophy revolves around hard work, discipline, and having fun on the court.</p>
     </div>
     <div className="coach">
-      <img src={coach2}  alt="idk which kid" />
-      <h3>idk which kid</h3>
-      <p>filler coaches</p>
+      <img src={coach2}  alt="LinLin" />
+      <h3>LinLin</h3>
+      <p className="coach-title">Organizer</p>
+      <p>LinLin is the driving force behind Bay Area Tennis Together, expertly managing communication, logistics, and event coordination. 
+        As Max's mother and the primary organizer, she ensures the smooth operation of the club with her exceptional organizational skills. 
+        Beyond her administrative duties, LinLin is deeply committed to the success of our programs and the well-being of our members. Her warm, approachable nature
+         makes her a trusted figure in the community, allowing our coaches and players to focus on their love for tennis while she handles all the essential details.
+      </p>
     </div>
   </div>
 </section>
@@ -189,6 +210,34 @@ function App() {
             <img src={groupphoto} alt="Tennis Image 3" />
             <img src={groupphoto2} alt="Tennis Image 4" />
             <img src={practice} alt="Tennis Image 5" />
+          </div>
+        </section>
+
+        <section id="faq" className="section container">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="faq-item">
+            <h3>What is Bay Area Tennis Together?</h3>
+            <p>Bay Area Tennis Together is a community organization dedicated to bringing tennis enthusiasts of all levels together. We provide opportunities for players to improve their skills, participate in events, and connect with others who share a passion for tennis.</p>
+          </div>
+          <div className="faq-item">
+            <h3>When are sessions held?</h3>
+            <p>Primarily on the second Saturday of each month from 2:30 - 4:00pm, but sometimes circumstances arise that require us to change the date. We will update you through WeChat and through the calendar if something comes up. </p>
+          </div>
+          <div className="faq-item">
+            <h3>Who can join the club?</h3>
+            <p>Our club is open to tennis players of all ages and skill levels. Whether you're a beginner or an advanced player, we have something for you.</p>
+          </div>
+          <div className="faq-item">
+            <h3>How do I sign up for events?</h3>
+            <p>Please contact us through WeChat if you are interested in joining the club. </p>
+          </div>
+          <div className="faq-item">
+            <h3>Where are the events held?</h3>
+            <p>Our events are primarily held in the Fremont, Newark, and Union City tri-city area. Specific locations will be listed on the event details in the calendar or in WeChat.</p>
+          </div>
+          <div className="faq-item">
+            <h3>How can I get involved as a volunteer?</h3>
+            <p>If you're interested in volunteering, please contact us directly through WeChat. We are always looking for enthusiastic individuals to help with our events and programs.</p>
           </div>
         </section>
         <section id="contact" className="section container">
