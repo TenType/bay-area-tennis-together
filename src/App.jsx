@@ -12,7 +12,8 @@ import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
 import practice from "./assets/gallery/practice.webp";
 import coach2 from "./assets/gallery/jayden.webp"
-import coach1 from "./assets/gallery/coach1.webp"
+import coach3 from "./assets/gallery/coach3.webp"
+import coach4 from "./assets/gallery/coach4.webp"
 
 function App() {
   const [formStatus, setFormStatus] = useState(""); 
@@ -134,9 +135,7 @@ function App() {
             >
               Love Thy Neighbor
             </a>
-            .<br />
-            Ran primarily by high school volunteers, on the second Saturday of
-            each month (but check the calendar to be certain!)
+
           </p>
         </section>
         
@@ -165,14 +164,15 @@ function App() {
          He has a knack for identifying and nurturing talent, making him a favorite among young athletes.</p>
     </div>
     <div className="coach">
-      <img src={coach2} alt="Darryl Wu" />
-      <h3>Darryl Wu</h3>
+      <img src={coach3} alt="Darry Wu" />
+      <h3>Darry Wu</h3>
       <p className="coach-title">Coach</p>
-      <p>Darryl Wu is a seasoned tennis coach with a background in biology and anatomy. His deep understanding of biomechanics allows him to help players optimize their performance and prevent injuries. 
+      <p>Darry Wu is a seasoned tennis coach with a background in biology and anatomy. His deep understanding of biomechanics allows him to help players optimize their 
+        performance and prevent injuries, especially for younger players who haven't been educated on the benefits of stretching!
         He is committed to fostering a positive and motivating environment for all his students.</p>
     </div>
     <div className="coach">
-      <img src={coach1}  alt="Daniel Guo" />
+      <img src={coach4}  alt="Daniel Guo" />
       <h3>Daniel Guo</h3>
       <p className="coach-title">Coach</p>
       <p>Daniel has been passionate about tennis since he was young, and he's thrilled to be teaching kids how to play the game. 
