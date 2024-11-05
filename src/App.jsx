@@ -1,42 +1,46 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import "./App.css";
 import EventCalendar from "./EventCalendar";
 import "./index.css";
-import "./App.css";
 
+// import backgroundVideo from "./assets/background.mp4";
 import logo from "./assets/batt.png";
-import backgroundVideo from "./assets/background.mp4";
 
-import stretching from "./assets/gallery/stretching.jpg";
-import stretching2 from "./assets/gallery/stretching2.jpg";
+import coachcyrus from "./assets/gallery/cyrus.png";
+import coachdaniel from "./assets/gallery/daniel.webp";
+import coachdarry from "./assets/gallery/darry.webp";
+import coachmax from "./assets/gallery/max.png";
+
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
+import grouppractice from "./assets/gallery/grouppractice.jpg";
+import coachjayden from "./assets/gallery/jayden.webp";
 import practice from "./assets/gallery/practice.webp";
-import coach2 from "./assets/gallery/jayden.webp"
-import coach3 from "./assets/gallery/coach3.webp"
-import coach4 from "./assets/gallery/coach4.webp"
+import stretching from "./assets/gallery/stretching.jpg";
+import stretching2 from "./assets/gallery/stretching2.jpg";
 
 function App() {
-  const [formStatus, setFormStatus] = useState(""); 
+  const [formStatus, setFormStatus] = useState("");
 
   useEffect(() => {
-    const header = document.querySelector('.header');
-    const hero = document.querySelector('.hero');
-    const logoContainer = document.querySelector('.logo-container');
+    const header = document.querySelector(".header");
+    const hero = document.querySelector(".hero");
+    const logoContainer = document.querySelector(".logo-container");
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.intersectionRatio < 0.5) {
-          header.classList.add('scrolled');
-          logoContainer.classList.add('scrolled');
+          header.classList.add("scrolled");
+          logoContainer.classList.add("scrolled");
         } else {
-          header.classList.remove('scrolled');
-          logoContainer.classList.remove('scrolled');
+          header.classList.remove("scrolled");
+          logoContainer.classList.remove("scrolled");
         }
       },
       { threshold: [0.5] }
     );
 
-    observer.observe(document.querySelector('#hero'));
+    observer.observe(document.querySelector("#hero"));
 
     return () => {
       observer.disconnect();
@@ -58,10 +62,10 @@ function App() {
     const url = `https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse?usp=pp_url&entry.1878656242=${firstName}&entry.1696058884=${lastName}&entry.431504041=${email}&entry.42028302=${phone}&entry.1237852117=${enquiry}&entry.1646022538=${message}`;
 
     try {
-      await fetch(url, { mode: 'no-cors' });
-      setFormStatus("Your response has been recorded."); 
+      await fetch(url, { mode: "no-cors" });
+      setFormStatus("Your response has been recorded.");
     } catch (error) {
-      setFormStatus("There was an error submitting your response."); 
+      setFormStatus("There was an error submitting your response.");
     }
   };
 
@@ -76,16 +80,16 @@ function App() {
           <nav>
             <ul className="nav-links">
               <li>
-                <a href="#about">About</a>
+                <a href="#about">About Us</a>
               </li>
               <li>
-                <a href="#events">Events</a>
+                <a href="#team">Team</a>
               </li>
               <li>
                 <a href="#gallery">Gallery</a>
               </li>
               <li>
-                <a href="#coaches">Our Coaches</a>
+                <a href="#events">Events</a>
               </li>
               <li>
                 <a href="#faq">FAQ</a>
@@ -99,14 +103,18 @@ function App() {
       </header>
       <main>
         <section id="hero" className="hero">
-          <video autoPlay loop muted className="background-video">
-            <source src={backgroundVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <img
+            src={grouppractice}
+            alt="Bay Area Tennis Together"
+            className="home-background"
+          />
           <div className="hero-content">
-            <h2 className="hero-title">Dedication, Sweat, Success</h2>
+            <h2 className="hero-title">
+              Building Community, One Rally at a Time
+            </h2>
             <p className="hero-subtitle">
-              Join the most dedicated tennis community in the Bay Area!
+              Join the most dedicated tennis coaching organization in the Bay
+              Area!
             </p>
             <a href="#about" className="btn">
               Learn More
@@ -115,19 +123,38 @@ function App() {
         </section>
         <section id="about" className="section container">
           <h2 className="section-title">About Us</h2>
-          <p>
+          <p className="about">
             Welcome to Bay Area Tennis Together, your go-to community for all
-            things tennis in the Bay Area. Whether you are a beginner or a
-            seasoned player, we have something for everyone. <br />
-            At Bay Area Tennis Together, our mission is to bring tennis
-            enthusiasts of all levels together. Our community is built on the
-            principles of sportsmanship, camaraderie, and a shared passion for
+            things tennis. Whether you are a beginner or a seasoned player, we
+            have something for everyone. Our community is built on the
+            principles of sportsmanship, inclusivity, and a shared passion for
             tennis. <br />
-            Join us and become part of a supportive and dynamic tennis community
-            where dedication, sweat, and success are celebrated every day.{" "}
+            <br />
+            Since 2021, we have served over 50 students and raised over $3000
+            for food banks, clothing drives, environmental conservation
+            programs, and support for families with terminally-ill children and
+            in marginalized communities. Our volunteers' efforts have been
+            recognized with{" "}
+            <a
+              href="https://presidentialserviceawards.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              President's Volunteer Service Awards
+            </a>{" "}
+            for over 1000 combined service hours and outstanding contributions
+            in community service in the Bay Area community.
             <br />
             <br />
-            Officially under our parent organization{" "}
+            Bay Area Tennis Together is committed to uplifting students from all
+            backgrounds, no matter the cost. If purchasing tennis rackets or
+            gear is a financial burden to your family, please request to borrow
+            spare tennis equipment or obtain a fee waiver when signing up for an
+            event. We are more than happy to accommodate students who require
+            financial assistance.
+            <br />
+            <br />
+            Officially under{" "}
             <a
               href="https://www.ltnfamily.org/home"
               target="_blank"
@@ -135,73 +162,109 @@ function App() {
             >
               Love Thy Neighbor
             </a>
-
+            , a certified 501(c)(3) nonprofit organization.
           </p>
         </section>
-        
-        <section id="events" className="section container">
-          <h2 className="section-title">Events</h2>
-          <EventCalendar />
+        <section id="team" className="section container">
+          <h2 className="section-title">Meet the Team</h2>
+          <div className="coaches-grid">
+            <div className="coach">
+              <img src={coachmax} alt="Max Wen" />
+              <h3>Max Wen</h3>
+              <p className="coach-title">President</p>
+              <p>
+                Max Wen co-founded Bay Area Tennis Together in 2021 and leads
+                the team as a tennis instructor with over a decade of
+                experience. He has played competitively at various levels and
+                believes in a holistic approach to tennis, focusing on both the
+                mental and physical aspects of the game. When he is not teaching
+                students, Max enjoys using his passion for computer science to
+                create tailored lesson plans and expand community outreach
+                programs through software and collaboration. His mission is to
+                ensure that every student, regardless of income or physical
+                ability, can learn and enjoy tennis.{" "}
+              </p>
+            </div>
+            <div className="coach">
+              <img src={coachjayden} alt="Jayden Szeto" />
+              <h3>Jayden Szeto</h3>
+              <p className="coach-title">Co-President</p>
+              <p>
+                Jayden Szeto has been playing tennis for most of his life,
+                transitioning from player to coach. He started playing tennis at
+                a young age and quickly fell in love with the sport. Jayden is
+                known for his dynamic coaching style, which emphasizes agility,
+                technique, and strategy. He has a knack for identifying and
+                nurturing talent, making him a favorite among young athletes.
+              </p>
+            </div>
+            <div className="coach">
+              <img src={coachdarry} alt="Darry Wu" />
+              <h3>Darry Wu</h3>
+              <p className="coach-title">Co-President</p>
+              <p>
+                Darry Wu is a seasoned tennis coach with a background in biology
+                and anatomy. His deep understanding of biomechanics allows him
+                to help players optimize their performance and prevent injuries,
+                especially for younger players who haven't been educated on the
+                benefits of stretching! He is committed to fostering a positive
+                and motivating environment for all his students.
+              </p>
+            </div>
+            <div className="coach">
+              <img src={coachdaniel} alt="Daniel Guo" />
+              <h3>Daniel Guo</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                Daniel has been passionate about tennis since he was young, and
+                he's thrilled to be teaching kids how to play the game. He
+                believes that teaching is one of the most rewarding pursuits,
+                and it’s something he truly enjoys. Watching students improve
+                with each lesson is incredibly fulfilling for Daniel, and he’s
+                grateful for the opportunity to help more people experience
+                tennis, especially since it’s often seen as a sport with a high
+                barrier to entry.
+              </p>
+            </div>
+            <div className="coach">
+              <img src={coachcyrus} alt="Cyrus Ma" />
+              <h3>Cyrus Ma</h3>
+              <p className="coach-title">Assistant Instructor</p>
+              <p>
+                {" "}
+                Cyrus Ma is a dedicated tennis coach with a passion for teaching
+                kids. He has played tennis competitively for around three years
+                and brings both experience and enthusiasm to his coaching. While
+                he finds tennis a fun sport, he understands that it also poses
+                physical and mental challenges. With a friendly and patient
+                approach, Cyrus fosters a positive and encouraging learning
+                environment where young players can grow and refine their
+                skills. He is committed to helping his students reach their full
+                potential and achieve their tennis goals.
+              </p>
+            </div>
+            <div className="coach">
+              <img
+                src={logo}
+                style={{ backgroundColor: "black" }}
+                alt="Jason Lai"
+              />
+              <h3>Jason Lai</h3>
+              <p className="coach-title">Assistant Instructor</p>
+              <p>
+                {" "}
+                Jason Lai is an accomplished tennis coach who has worked with
+                players of all levels, from beginners to professionals. With a
+                focus on tactical training and match play, Jason helps his
+                students develop the skills needed to excel in competitive
+                tennis. He is known for his very dynamic coaching style and his
+                ability to push players to reach their full potential. Jason’s
+                coaching philosophy revolves around hard work, discipline, and
+                having fun on the court.
+              </p>
+            </div>
+          </div>
         </section>
-        
-  <section id="coaches" className="section container">
-  <h2 className="section-title">Our Coaches</h2>
-  <div className="coaches-grid">
-    <div className="coach">
-      <img src={coach2}  alt="Max Wen" />
-      <h3>Max Wen</h3>
-      <p className="coach-title">Coach</p>
-      <p>Max Wen is a passionate tennis coach with over a decade of experience. He has played competitively at various levels and is dedicated to helping players of all ages 
-        improve their skills. Max believes in a holistic approach to tennis, focusing on both the mental and physical aspects of the game. His students appreciate his patience, 
-        expertise, and ability to tailor lessons to individual needs. </p>
-    </div>
-    <div className="coach">
-      <img src={coach2} alt="Jayden Szeto" />
-      <h3>Jayden Szeto</h3>
-      <p className="coach-title">Coach</p>
-      <p>Jayden Szeto has been playing tennis for most of his life, transitioning from player to coach. He started playing tennis at a young age and quickly fell in love with the sport.
-         Jayden is known for his dynamic coaching style, which emphasizes agility, technique, and strategy. 
-         He has a knack for identifying and nurturing talent, making him a favorite among young athletes.</p>
-    </div>
-    <div className="coach">
-      <img src={coach3} alt="Darry Wu" />
-      <h3>Darry Wu</h3>
-      <p className="coach-title">Coach</p>
-      <p>Darry Wu is a seasoned tennis coach with a background in biology and anatomy. His deep understanding of biomechanics allows him to help players optimize their 
-        performance and prevent injuries, especially for younger players who haven't been educated on the benefits of stretching!
-        He is committed to fostering a positive and motivating environment for all his students.</p>
-    </div>
-    <div className="coach">
-      <img src={coach4}  alt="Daniel Guo" />
-      <h3>Daniel Guo</h3>
-      <p className="coach-title">Coach</p>
-      <p>Daniel has been passionate about tennis since he was young, and he's thrilled to be teaching kids how to play the game. 
-        He believes that teaching is one of the most rewarding pursuits, and it’s something he truly enjoys. Watching students improve 
-        with each lesson is incredibly fulfilling for Daniel, and he’s grateful for the opportunity to help more people experience tennis, 
-        especially since it’s often seen as a sport with a high barrier to entry.  
-      </p>
-    </div>
-    <div className="coach">
-      <img src={coach2}  alt="Jason Lai" />
-      <h3>Jason Lai</h3>
-      <p className="coach-title">Coach</p>
-      <p> Jason Lai is an accomplished tennis coach who has worked with players of all levels, from beginners to professionals. 
-        With a focus on tactical training and match play, Jason helps his students develop the skills needed to excel in competitive tennis. 
-        He is known for his very dynamic coaching style and his ability to push players to reach their full potential. 
-        Jason’s coaching philosophy revolves around hard work, discipline, and having fun on the court.</p>
-    </div>
-    <div className="coach">
-      <img src={coach2}  alt="LinLin" />
-      <h3>LinLin</h3>
-      <p className="coach-title">Organizer</p>
-      <p>LinLin is the driving force behind Bay Area Tennis Together, expertly managing communication, logistics, and event coordination. 
-        As Max's mother and the primary organizer, she ensures the smooth operation of the club with her exceptional organizational skills. 
-        Beyond her administrative duties, LinLin is deeply committed to the success of our programs and the well-being of our members. Her warm, approachable nature
-         makes her a trusted figure in the community, allowing our coaches and players to focus on their love for tennis while she handles all the essential details.
-      </p>
-    </div>
-  </div>
-</section>
         <section id="gallery" className="section container">
           <h2 className="section-title">Gallery</h2>
           <div className="gallery-grid">
@@ -213,81 +276,139 @@ function App() {
           </div>
         </section>
 
+        <section id="events" className="section container">
+          <h2 className="section-title">Events</h2>
+          <EventCalendar />
+        </section>
+
         <section id="faq" className="section container">
           <h2 className="section-title">Frequently Asked Questions</h2>
           <div className="faq-item">
             <h3>What is Bay Area Tennis Together?</h3>
-            <p>Bay Area Tennis Together is a community organization dedicated to bringing tennis enthusiasts of all levels together. We provide opportunities for players to improve their skills, participate in events, and connect with others who share a passion for tennis.</p>
+            <p>
+              Bay Area Tennis Together is a community organization dedicated to
+              bringing tennis enthusiasts of all levels together. We provide
+              opportunities for players to improve their skills, participate in
+              events, and connect with others who share a passion for tennis.
+            </p>
           </div>
           <div className="faq-item">
             <h3>When are sessions held?</h3>
-            <p>Primarily on the second Saturday of each month from 2:30 - 4:00pm, but sometimes circumstances arise that require us to change the date. We will update you through WeChat and through the calendar if something comes up. </p>
+            <p>
+              Primarily on the second Saturday of each month from 2:30 - 4:00pm,
+              but sometimes circumstances arise that require us to change the
+              date. We will update you through email, WeChat, and the shared
+              calendar if something comes up.{" "}
+            </p>
           </div>
           <div className="faq-item">
             <h3>Who can join the club?</h3>
-            <p>Our club is open to tennis players of all ages and skill levels. Whether you're a beginner or an advanced player, we have something for you.</p>
+            <p>
+              Our club is open to tennis players of all ages and skill levels.
+              Whether you're a beginner or an advanced player, we have something
+              for you.
+            </p>
           </div>
           <div className="faq-item">
             <h3>How do I sign up for events?</h3>
-            <p>Please contact us through WeChat if you are interested in joining the club. </p>
+            <p>
+              Please contact us through email or WeChat if you are interested in
+              reserving a spot at our next community event. For private tutoring
+              lessons, please reach out to your designated tutor for more
+              information.
+            </p>
           </div>
           <div className="faq-item">
             <h3>Where are the events held?</h3>
-            <p>Our events are primarily held in the Fremont, Newark, and Union City tri-city area. Specific locations will be listed on the event details in the calendar or in WeChat.</p>
+            <p>
+              Our events are held all across the Bay Area, including the
+              Fremont, Newark, and Union City Tri-City area.
+            </p>
           </div>
           <div className="faq-item">
             <h3>How can I get involved as a volunteer?</h3>
-            <p>If you're interested in volunteering, please contact us directly through WeChat. We are always looking for enthusiastic individuals to help with our events and programs.</p>
+            <p>
+              We are glad you want to help our events! If you are interested in
+              volunteering, please contact us in-person at the next community
+              event, send an email to our team, or message us on WeChat. If
+              eligible, you may also be able to earn service hours and the{" "}
+              <a
+                href="https://presidentialserviceawards.gov/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                President's Volunteer Service Awards
+              </a>{" "}
+              by volunteering as part of the team.
+            </p>
           </div>
         </section>
         <section id="contact" className="section container">
-  <h2 className="section-title">Contact Us</h2>
-  <form 
-  action="https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse" 
-  method="POST" 
-  target="_self"
-  className="contact-form"
->
-  <div className="form-row">
-    <div className="form-group">
-      <label htmlFor="first-name">First Name</label>
-      <input type="text" id="first-name" name="entry.1878656242" required />
-    </div>
-    <div className="form-group">
-      <label htmlFor="last-name">Last Name</label>
-      <input type="text" id="last-name" name="entry.1696058884" required />
-    </div>
-  </div>
-  <div className="form-row">
-    <div className="form-group">
-      <label htmlFor="email">Email Address</label>
-      <input type="email" id="email" name="entry.431504041" required />
-    </div>
-    <div className="form-group">
-      <label htmlFor="phone">Phone Number</label>
-      <input type="tel" id="phone" name="entry.42028302" />
-    </div>
-  </div>
-  <div className="form-group">
-    <label htmlFor="enquiry">Reason of Enquiry</label>
-    <select id="enquiry" name="entry.1237852117">
-      <option value="">--Select--</option>
-      <option value="General">General</option>
-      <option value="Membership">Membership</option>
-      <option value="Events">Events</option>
-    </select>
-  </div>
-  <div className="form-group">
-    <label htmlFor="message">Comments</label>
-    <textarea id="message" name="entry.1646022538" required></textarea>
-  </div>
-  <button type="submit" className="btn">
-    Submit
-  </button>
-</form>
-{formStatus && <p className="form-status">{formStatus}</p>}
-</section>
-
+          <h2 className="section-title">Contact Us</h2>
+          <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse"
+            method="POST"
+            target="_self"
+            className="contact-form"
+          >
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="first-name">First Name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="entry.1878656242"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="entry.1696058884"
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="entry.431504041"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input type="tel" id="phone" name="entry.42028302" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="enquiry">Reason of Enquiry</label>
+              <select id="enquiry" name="entry.1237852117">
+                <option value="">--Select--</option>
+                <option value="General">General</option>
+                <option value="Membership">Membership</option>
+                <option value="Events">Events</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Comments</label>
+              <textarea
+                id="message"
+                name="entry.1646022538"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="btn">
+              Submit
+            </button>
+          </form>
+          {formStatus && <p className="form-status">{formStatus}</p>}
+        </section>
       </main>
       <footer className="footer">
         <div className="container">

@@ -1,27 +1,29 @@
-html, body {
-  font-family: 'Roboto', sans-serif;
+html,
+body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .header {
-  background: #333;
+  background: rgba(0, 81, 38);
   color: #fff;
-  height: 3rem;
   height: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -34,8 +36,8 @@ header, main, footer {
 }
 
 .header.scrolled {
-  background: rgba(51, 51, 51, 0.9);
-  height: 3rem;
+  background: rgba(0, 81, 38);
+  height: 4rem;
 }
 
 .header .container {
@@ -43,7 +45,6 @@ header, main, footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 1rem;
   max-width: 100%;
 }
 
@@ -52,9 +53,9 @@ header, main, footer {
   align-items: center;
   position: absolute;
   size: 150%;
-  top: 70px;
-  left: 30px; 
-  transition: all 0.6s ease; 
+  top: 50px;
+  left: 30px;
+  transition: all 0.6s ease;
 }
 
 .header.scrolled .logo-container {
@@ -66,19 +67,26 @@ header, main, footer {
 
 .logo-container img {
   height: 8rem;
-  transition: all 0.6s ease; 
+  transition: all 0.6s ease;
+  filter: drop-shadow(0 0 0.75rem black);
 }
 
 .header.scrolled .logo-container img {
-  height: 2rem;
+  height: 4rem;
 }
 
 .header .logo {
   margin: 0;
-  font-size: 1rem;
+  padding: 0 0 0 10px;
+  font-size: 30px;
   display: flex;
   align-items: center;
-  transition: all 0.6s ease; 
+  transition: all 0.6s ease;
+  text-shadow: black 1px 0 10px;
+}
+
+.header.scrolled .logo {
+  font-size: 20px;
 }
 
 .nav-links {
@@ -114,12 +122,12 @@ header, main, footer {
   text-align: center;
   height: 100vh;
   width: 100%;
-  margin: 0; 
-  padding: 0; 
-  padding-top: 3rem; 
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
 }
 
-.background-video {
+.home-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -127,6 +135,7 @@ header, main, footer {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(60%);
 }
 
 .hero-content {
@@ -138,8 +147,8 @@ header, main, footer {
   justify-content: center;
   height: 100%;
   width: 100%;
-  padding: 0 1rem; 
-  padding: 0 1rem; 
+  padding: 0 1rem;
+  text-shadow: black 1px 0 10px;
 }
 
 .hero-title {
@@ -171,18 +180,14 @@ header, main, footer {
 
 .container {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem;
   box-sizing: border-box;
-}
-
-.section {
-  margin-bottom: 4rem;
 }
 
 .section-title {
   text-align: center;
   font-size: 2rem;
-  color: #0047ab;
+  color: rgba(0, 81, 38);
   margin-bottom: 1rem;
 }
 
@@ -228,14 +233,16 @@ form label {
   margin-bottom: 0.5rem;
 }
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 form textarea {
@@ -245,21 +252,20 @@ form textarea {
 
 form button {
   padding: 0.75rem 1.5rem;
-  background: #0047ab;
+  background: rgba(0, 81, 38);
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   align-self: flex-end;
 }
 
 form button:hover {
   background: #003b8b;
 }
-
 
 .footer {
   background: #333;
@@ -268,7 +274,6 @@ form button:hover {
   padding: 1rem 0;
   width: 100%;
 }
-
 
 @media (max-width: 768px) {
   .hero-title {
@@ -280,7 +285,7 @@ form button:hover {
   }
 
   .nav-links {
-    display: none; 
+    display: none;
   }
 
   .header .container {
@@ -301,7 +306,7 @@ html {
 }
 
 .event-calendar iframe {
-  border: 2px solid #0047ab;
+  border: 2px solid rgba(0, 81, 38);
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -349,29 +354,34 @@ html {
 
 @media (max-width: 768px) {
   .coaches-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .coaches-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .coach img {
-  width: 250px; 
-  height: 250px; 
-  border-radius: 50%; 
-  object-fit: cover; 
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
 .coach-title {
   font-size: 1.1rem;
-  color: #0056b3  !important;
-  margin: 0.25rem 0; 
+  color: #0056b3 !important;
+  margin: 0.25rem 0;
   font-weight: 600;
-  letter-spacing: 0.5px; 
-  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.about {
+  padding-left: 50px;
+  padding-right: 50px;
 }
