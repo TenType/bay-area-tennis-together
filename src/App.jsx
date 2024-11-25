@@ -14,7 +14,7 @@ import coachmax from "./assets/gallery/max.png";
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
 import grouppractice from "./assets/gallery/grouppractice.jpg";
-import coachjayden from "./assets/gallery/jayden.PNG";
+import coachjayden from "./assets/gallery/jayden.png";
 import practice from "./assets/gallery/practice.webp";
 import stretching from "./assets/gallery/stretching.jpg";
 import stretching2 from "./assets/gallery/stretching2.jpg";
