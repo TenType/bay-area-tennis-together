@@ -130,7 +130,7 @@ function App() {
             principles of sportsmanship, inclusivity, and a shared passion for
             tennis. <br />
             <br />
-            Since 2021, we have served over 50 students and raised over $3000
+            Since 2021, we have served over 100 students and raised over $3000
             for food banks, clothing drives, environmental conservation
             programs, and support for families with terminally-ill children and
             in marginalized communities. Our volunteers' efforts have been
