@@ -265,6 +265,23 @@ function App() {
               </p>
             </div>
           </div>
+          <div className="coach">
+              <img src={coachmatthewli1} alt="Matthew Li" />
+              <h3>Matthew Li</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Matthew Li is a dedicated tennis coach with a passion for teaching
+                kids. He has played tennis competitively for around three years
+                and brings both experience and enthusiasm to his coaching. While
+                he finds tennis a fun sport, he understands that it also poses
+                physical and mental challenges. With a friendly and patient
+                approach, Cyrus fosters a positive and encouraging learning
+                environment where young players can grow and refine their
+                skills. He is committed to helping his students reach their full
+                potential and achieve their tennis goals.
+              </p>
+            </div>
         </section>
         <section id="gallery" className="section container">
           <h2 className="section-title">Gallery</h2>
