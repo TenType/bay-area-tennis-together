@@ -272,15 +272,14 @@ function App() {
               <p className="coach-title">Instructor</p>
               <p>
                 {" "}
-                Matthew Li is a dedicated tennis coach with a passion for teaching
-                kids. He has played tennis competitively for around three years
-                and brings both experience and enthusiasm to his coaching. While
-                he finds tennis a fun sport, he understands that it also poses
-                physical and mental challenges. With a friendly and patient
-                approach, Cyrus fosters a positive and encouraging learning
-                environment where young players can grow and refine their
-                skills. He is committed to helping his students reach their full
-                potential and achieve their tennis goals.
+                Matthew is an experienced tennis coach who works with kids across 
+                a range of age groups. Having played tennis for over a decade—and 
+                competing for seven years—he currently serves as the captain of 
+                the Mission San Jose Varsity team. His coaching style emphasizes 
+                consistency and match play, helping young athletes not only build 
+                skills but also develop a genuine passion for the game. Outside 
+                the court, Matthew pursues his interest in biology through research 
+                focused on diabetes and cancer.
               </p>
             </div>
         </section>
