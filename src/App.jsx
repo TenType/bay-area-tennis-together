@@ -282,7 +282,7 @@ function App() {
                 focused on diabetes and cancer.
               </p>
             </div>
-          div className="coach">
+          <div className="coach">
               <img src={coachrachel} alt="Rachel Nguyen" />
               <h3>Rachel Nguyen</h3>
               <p className="coach-title">Instructor</p>
