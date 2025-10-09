@@ -267,7 +267,7 @@ function App() {
             </div>
           </div>
           <div className="coach">
-              <img src={coachmatthewli1} alt="Matthew Li" />
+              <img src={coachmatthew} alt="Matthew Li" />
               <h3>Matthew Li</h3>
               <p className="coach-title">Instructor</p>
               <p>
