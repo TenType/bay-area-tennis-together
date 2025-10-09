@@ -265,7 +265,6 @@ function App() {
                 having fun on the court.
               </p>
             </div>
-          </div>
           <div className="coach">
               <img src={coachmatthew} alt="Matthew Li" />
               <h3>Matthew Li</h3>
@@ -301,6 +300,7 @@ function App() {
                 passionate about making tennis an enjoyable and rewarding experience for all.
               </p>
             </div>
+          </div>
         </section>
         <section id="gallery" className="section container">
           <h2 className="section-title">Gallery</h2>
