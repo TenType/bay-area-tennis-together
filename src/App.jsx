@@ -332,7 +332,7 @@ function App() {
           <div className="faq-item">
             <h3>When are sessions held?</h3>
             <p>
-              Primarily on the second Saturday of each month from 2:30 - 4:00pm,
+              Primarily on the second Saturday of each month from 2:00 - 3:30pm,
               but sometimes circumstances arise that require us to change the
               date. We will update you through email, WeChat, and the shared
               calendar if something comes up.{" "}
