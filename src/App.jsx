@@ -10,6 +10,8 @@ import coachcyrus from "./assets/gallery/cyrus.png";
 import coachdaniel from "./assets/gallery/daniel.webp";
 import coachdarry from "./assets/gallery/darry.webp";
 import coachmax from "./assets/gallery/max.png";
+import coachmatthew from "./assets/gallery/matthewli1.jpeg";
+import coachrachel from "./assets/gallery/rachel.jpg";
 
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
@@ -276,6 +278,41 @@ function App() {
                 having fun on the court.
               </p>
             </div>
+          <div className="coach">
+              <img src={coachmatthew} alt="Matthew Li" />
+              <h3>Matthew Li</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Matthew is an experienced tennis coach who works with kids across 
+                a range of age groups. Having played tennis for over a decade—and 
+                competing for seven years—he currently serves as the captain of 
+                the Mission San Jose Varsity team. His coaching style emphasizes 
+                consistency and match play, helping young athletes not only build 
+                skills but also develop a genuine passion for the game. Outside 
+                the court, Matthew pursues his interest in biology through research 
+                focused on diabetes and cancer.
+              </p>
+            </div>
+          <div className="coach">
+              <img src={coachrachel} alt="Rachel Nguyen" />
+              <h3>Rachel Nguyen</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Rachel is a passionate tennis player and dedicated volunteer coach,
+                currently playing for her high school varsity team. Beyond tennis, 
+                she has a love for reading and video editing, and she deeply enjoys 
+                helping young kids. Her journey began with teaching English to children, 
+                and now, she’s sharing her love for tennis with them. With valuable 
+                coaching experience, Rachel is committed to helping kids develop both 
+                their skills and their confidence on the court. Driven by a strong desire 
+                to give back to her community, she creates a fun, supportive environment 
+                where children can learn, grow, and enjoy the game. Whether it’s introducing 
+                new players to the sport or refining more advanced techniques, Rachel is 
+                passionate about making tennis an enjoyable and rewarding experience for all.
+              </p>
+            </div>
           </div>
         </section>
         <section id="gallery" className="section container">
@@ -315,7 +352,7 @@ function App() {
           <div className="faq-item">
             <h3>When are sessions held?</h3>
             <p>
-              Primarily on the second Saturday of each month from 2:30 - 4:00pm,
+              Primarily on the second Saturday of each month from 2:00 - 3:30pm,
               but sometimes circumstances arise that require us to change the
               date. We will update you through email, WeChat, and the shared
               calendar if something comes up.{" "}
