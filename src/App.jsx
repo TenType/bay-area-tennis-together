@@ -12,6 +12,8 @@ import coachdarry from "./assets/gallery/darry.webp";
 import coachmax from "./assets/gallery/max.png";
 import coachmatthew from "./assets/gallery/matthewli1.jpeg";
 import coachrachel from "./assets/gallery/rachel.jpg";
+import coachfiona from "./assets/gallery/FionaZhou.jpg";
+import coachkatty from "./assets/gallery/KattyZhou.jpg";
 
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
@@ -300,17 +302,13 @@ function App() {
               <p className="coach-title">Instructor</p>
               <p>
                 {" "}
-                Rachel is a passionate tennis player and dedicated volunteer coach,
+                Rachel is a passionate tennis player and dedicated volunteer coach, 
                 currently playing for her high school varsity team. Beyond tennis, 
-                she has a love for reading and video editing, and she deeply enjoys 
-                helping young kids. Her journey began with teaching English to children, 
+                she has a love for reading and video editing, and she enjoys helping 
+                young kids. Her journey began with teaching English to children, 
                 and now, she’s sharing her love for tennis with them. With valuable 
-                coaching experience, Rachel is committed to helping kids develop both 
-                their skills and their confidence on the court. Driven by a strong desire 
-                to give back to her community, she creates a fun, supportive environment 
-                where children can learn, grow, and enjoy the game. Whether it’s introducing 
-                new players to the sport or refining more advanced techniques, Rachel is 
-                passionate about making tennis an enjoyable and rewarding experience for all.
+                coaching experience, Rachel is committed to helping kids develop 
+                both their skills and their confidence on the court.
               </p>
             </div>
           </div>
