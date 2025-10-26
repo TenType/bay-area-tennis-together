@@ -12,6 +12,8 @@ import coachdarry from "./assets/gallery/darry.webp";
 import coachmax from "./assets/gallery/max.png";
 import coachmatthew from "./assets/gallery/matthewli1.jpeg";
 import coachrachel from "./assets/gallery/rachel.jpg";
+import coachfiona from "./assets/gallery/Fiona.jpg";
+import coachkatty from "./assets/gallery/Katty.jpg";
 
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
