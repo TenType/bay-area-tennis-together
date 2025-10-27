@@ -13,7 +13,7 @@ import coachmax from "./assets/gallery/max.png";
 import coachmatthew from "./assets/gallery/matthewli1.jpeg";
 import coachrachel from "./assets/gallery/rachel.jpg";
 import coachfiona from "./assets/gallery/FionaZhou.jpg";
-import coachkatty from "./assets/gallery/KattyZhou.jpg";
+import coachkathy from "./assets/gallery/KathyZhou.jpg";
 
 import groupphoto from "./assets/gallery/groupphoto.webp";
 import groupphoto2 from "./assets/gallery/groupphoto2.jpg";
