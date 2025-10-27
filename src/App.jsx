@@ -261,26 +261,6 @@ function App() {
               </p>
             </div>
             <div className="coach">
-              <img
-                src={logo}
-                style={{ backgroundColor: "black" }}
-                alt="Jason Lai"
-              />
-              <h3>Jason Lai</h3>
-              <p className="coach-title">Assistant Instructor</p>
-              <p>
-                {" "}
-                Jason Lai is an accomplished tennis coach who has worked with
-               players of all levels, from beginners to professionals. With a
-               focus on tactical training and match play, Jason helps his
-               students develop the skills needed to excel in competitive
-               tennis. He is known for his very dynamic coaching style and his
-               ability to push players to reach their full potential. Jason’s
-               coaching philosophy revolves around hard work, discipline, and
-               having fun on the court.
-              </p>
-           </div>
-          <div className="coach">
               <img src={coachmatthew} alt="Matthew Li" />
               <h3>Matthew Li</h3>
               <p className="coach-title">Instructor</p>
