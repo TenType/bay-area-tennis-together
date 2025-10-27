@@ -311,6 +311,20 @@ function App() {
                 both their skills and their confidence on the court.
               </p>
             </div>
+            <div className="coach">
+              <img src={coachfiona} alt="Fiona Zhou" />
+              <h3>Fiona Zhou</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Hi! Fiona is someone who’s truly passionate about tennis and teaching kids. 
+                She loves helping young players grow their skills, confidence, and love 
+                for the game in a fun and supportive environment. When she’s not on the 
+                court, you can usually find her doing something crafty or spending time 
+                with her cats. She believes that learning tennis should be exciting and 
+                full of encouragement.
+              </p>
+            </div>
           </div>
         </section>
         <section id="gallery" className="section container">
