@@ -305,6 +305,20 @@ function App() {
                 full of encouragement.
               </p>
             </div>
+            <div className="coach">
+              <img src={coachkathy} alt="Kathy Zhou" />
+              <h3>Kathy Zhou</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Hi, My name is Kathy. I’m 12 years old and a middle school student. 
+                I really love playing tennis because it lets me run, challenge myself, 
+                and make new friends. Tennis has taught me not only techniques, 
+                but also patience, focus, and teamwork. Outside of tennis, 
+                I enjoy spending time with friends, exploring new hobbies, 
+                and challenging myself to grow every day.
+              </p>
+            </div>
           </div>
         </section>
         <section id="gallery" className="section container">
