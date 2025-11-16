@@ -22,6 +22,13 @@ import coachjayden from "./assets/gallery/jayden.png";
 import practice from "./assets/gallery/practice.webp";
 import stretching from "./assets/gallery/stretching.jpg";
 import stretching2 from "./assets/gallery/stretching2.jpg";
+import MuyaoElvin from "./assets/gallery/20240216_Muyao_Elvin.jpg";
+import CyrusEden from "./assets/gallery/20241011_Cyrus_Eden.jpg";
+import JadelynClaire from "./assets/gallery/20250202_Jadelyn_Claire.jpg";
+import JadelynClaireLucas from "./assets/gallery/20250223_Jadelyn_Claire&Lucas.jpg";
+import RachelEllie from "./assets/gallery/20250701_Rachel_Ellie.jpg";
+import CyrusKatieAlyssa from "./assets/gallery/20250828_Cyrus_Katie_Alyssa.jpg";
+import AnwenEden from "./assets/gallery/20250829-Anwen-Eden.jpg";
 
 function App() {
   const [formStatus, setFormStatus] = useState("");
@@ -52,20 +59,26 @@ function App() {
   }, []);
 
   const handleSubmit = async (event) => {
+    // Prevent the browser's default form navigation so we can submit via fetch
     event.preventDefault();
 
     const formData = new FormData(event.target);
 
-    const firstName = formData.get("first-name");
-    const lastName = formData.get("last-name");
-    const email = formData.get("email");
-    const phone = formData.get("phone");
-    const enquiry = formData.get("enquiry");
-    const message = formData.get("message");
+    // The form uses Google's entry.<id> names, so read those exact keys.
+    const firstName = formData.get("entry.1878656242") || "";
+    const lastName = formData.get("entry.1696058884") || "";
+    const email = formData.get("entry.431504041") || "";
+    const phone = formData.get("entry.42028302") || "";
+    const enquiry = formData.get("entry.1237852117") || "";
+    const message = formData.get("entry.1646022538") || "";
 
-    const url = `https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse?usp=pp_url&entry.1878656242=${firstName}&entry.1696058884=${lastName}&entry.431504041=${email}&entry.42028302=${phone}&entry.1237852117=${enquiry}&entry.1646022538=${message}`;
+    // URL-encode values for safety
+    const q = (v) => encodeURIComponent(v);
+
+    const url = `https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse?usp=pp_url&entry.1878656242=${q(firstName)}&entry.1696058884=${q(lastName)}&entry.431504041=${q(email)}&entry.42028302=${q(phone)}&entry.1237852117=${q(enquiry)}&entry.1646022538=${q(message)}`;
 
     try {
+      // note: Google Forms often rejects cross-origin JS requests; no-cors makes the response opaque.
       await fetch(url, { mode: "no-cors" });
       setFormStatus("Your response has been recorded.");
     } catch (error) {
@@ -74,7 +87,7 @@ function App() {
   };
 
   return (
-    <div id="root">
+  <div id="app">
       <header className="header">
         <div className="container">
           <div className="logo-container">
@@ -244,30 +257,10 @@ function App() {
                 approach, Cyrus fosters a positive and encouraging learning
                 environment where young players can grow and refine their
                 skills. He is committed to helping his students reach their full
-                potential and achieve their tennis goals.
+                potential and achieve their tennis goals. 
               </p>
             </div>
             <div className="coach">
-              <img
-                src={logo}
-                style={{ backgroundColor: "black" }}
-                alt="Jason Lai"
-              />
-              <h3>Jason Lai</h3>
-              <p className="coach-title">Assistant Instructor</p>
-              <p>
-                {" "}
-                Jason Lai is an accomplished tennis coach who has worked with
-                players of all levels, from beginners to professionals. With a
-                focus on tactical training and match play, Jason helps his
-                students develop the skills needed to excel in competitive
-                tennis. He is known for his very dynamic coaching style and his
-                ability to push players to reach their full potential. Jason’s
-                coaching philosophy revolves around hard work, discipline, and
-                having fun on the court.
-              </p>
-            </div>
-          <div className="coach">
               <img src={coachmatthew} alt="Matthew Li" />
               <h3>Matthew Li</h3>
               <p className="coach-title">Instructor</p>
@@ -298,6 +291,34 @@ function App() {
                 both their skills and their confidence on the court.
               </p>
             </div>
+            <div className="coach">
+              <img src={coachfiona} alt="Fiona Zhou" />
+              <h3>Fiona Zhou</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Hi! Fiona is someone who’s truly passionate about tennis and teaching kids. 
+                She loves helping young players grow their skills, confidence, and love 
+                for the game in a fun and supportive environment. When she’s not on the 
+                court, you can usually find her doing something crafty or spending time 
+                with her cats. She believes that learning tennis should be exciting and 
+                full of encouragement.
+              </p>
+            </div>
+            <div className="coach">
+              <img src={coachkathy} alt="Kathy Zhou" />
+              <h3>Kathy Zhou</h3>
+              <p className="coach-title">Instructor</p>
+              <p>
+                {" "}
+                Hi, My name is Kathy. I’m 12 years old and a middle school student. 
+                I really love playing tennis because it lets me run, challenge myself, 
+                and make new friends. Tennis has taught me not only techniques, 
+                but also patience, focus, and teamwork. Outside of tennis, 
+                I enjoy spending time with friends, exploring new hobbies, 
+                and challenging myself to grow every day.
+              </p>
+            </div>
           </div>
         </section>
         <section id="gallery" className="section container">
@@ -308,6 +329,13 @@ function App() {
             <img src={groupphoto} alt="Tennis Image 3" />
             <img src={groupphoto2} alt="Tennis Image 4" />
             <img src={practice} alt="Tennis Image 5" />
+            <img src={MuyaoElvin} alt="Tennis Image 6" />
+            <img src={CyrusEden} alt="Tennis Image 7" />
+            <img src={JadelynClaire} alt="Tennis Image 8" />
+            <img src={JadelynClaireLucas} alt="Tennis Image 9" />
+            <img src={RachelEllie} alt="Tennis Image 10" />
+            <img src={CyrusKatieAlyssa} alt="Tennis Image 11" />
+            <img src={AnwenEden} alt="Tennis Image 12" />
           </div>
         </section>
 
@@ -381,6 +409,7 @@ function App() {
         <section id="contact" className="section container">
           <h2 className="section-title">Contact Us</h2>
           <form
+            onSubmit={handleSubmit}
             action="https://docs.google.com/forms/d/e/1FAIpQLSeoxy45AN7wmBE9gd4ZchDd87SeIfh22NXajUqfZ80bVdBkUA/formResponse"
             method="POST"
             target="_self"
